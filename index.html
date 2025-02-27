@@ -150,18 +150,15 @@
 
         async function showRandomLoveMessage() {
     try {
-        const response = await fetch('https://raw.githubusercontent.com/VanDSkye/Para-o-meu-amor/main/messages.json', {
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        
-        const data = await response.json();
+        const url = "https://api.allorigins.win/get?url=" + encodeURIComponent('https://raw.githubusercontent.com/VanDSkye/Para-o-meu-amor/main/messages.json');
 
-        const messages = data.messages;
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Erro HTTP! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        const messages = JSON.parse(data.contents).messages; // Parse do JSON interno
 
         let loveMessageBox = document.getElementById('loveMessage');
         loveMessageBox.innerHTML = messages[Math.floor(Math.random() * messages.length)];
@@ -170,7 +167,6 @@
         console.error('Erro ao carregar as mensagens:', error);
     }
 }
-
 
         const imagensDeFundo = [
             "imagens/fundo1.jpg",
