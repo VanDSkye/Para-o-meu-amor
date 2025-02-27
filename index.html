@@ -10,11 +10,11 @@
             font-family: 'Times New Roman', sans-serif;
             margin: 0;
             padding: 0;
-            height: auto; 
+            height: auto;
             background: url('imagens/fundo1.jpg') center/cover no-repeat fixed;
             color: #7B2CBF;
             text-align: center;
-            overflow-y: scroll; 
+            overflow-y: scroll;
             transition: background-image 1s ease-in-out;
         }
 
@@ -90,13 +90,21 @@
         }
 
         .melody {
-            bottom: 30px;
-            left: 1px; 
+            bottom: 20px;
+            left: 0;
         }
 
         .kuromi {
-            bottom: 30px;
-            right: 1px; 
+            bottom: 20px;
+            right: 0;
+        }
+
+        .aniversario {
+            background: rgba(255, 255, 255, 0.5);
+            padding: 15px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 20px;
         }
 
         @media (max-width: 768px) {
@@ -126,13 +134,13 @@
 
     <div class="message-box" id="photoMessage"></div>
 
-    <section>
-        <h2>Feliz Aniversánrio ✨</h2>
+    <section class="aniversario">
+        <h2>Feliz Aniversário ✨</h2>
         <p>Feliz aniversário, meu bem, minha flor,<br>
             Que o mundo se curve ao teu brilho, ao teu amor.<br>
             Que a vida te sorria e te dê o melhor,<br>
             Porque você é meu tudo, meu tesouro, meu amor!</p>
-        
+
         <p>Te amo mais a cada dia, mais do que posso expressar,<br>
             Você é minha vida, meu sonho, minha paz,<br>
             E ao seu lado, quero estar sempre, para o que der e vier, em qualquer lugar."</p>
@@ -158,11 +166,7 @@
                 "Seu abraço é meu lugar favorito no mundo, onde tudo faz sentido e a felicidade é completa. 🤗❤️",
                 "Você é o meu sonho mais bonito, aquele que eu nunca quero acordar. ✨💖",
                 "O seu sorriso tem o poder de transformar qualquer dia cinza em um dia ensolarado. ☀️😍",
-                "Cada 'eu te amo' que digo vem carregado de toda a imensidão do que sinto por você. 💞💬",
-                "Você é meu começo, meu meio e meu infinito. Nada faz sentido sem você. 🔄❤️",
-                "Você é a poesia mais linda que a vida escreveu no meu destino. 📖❤️",
-                "Se eu pudesse, colocaria todo o meu amor em palavras, mas ele é tão grande que nem o universo conseguiria conter. 🌍💖",
-                "Eu encontrei meu lugar no mundo, e ele é ao seu lado. 😘"
+                "Cada 'eu te amo' que digo vem carregado de toda a imensidão do que sinto por você. 💞💬"
             ];
 
             let loveMessageBox = document.getElementById('loveMessage');
@@ -172,7 +176,7 @@
 
         setInterval(() => {
             document.body.style.backgroundImage = `url('imagens/fundo${Math.floor(Math.random() * 4) + 1}.jpg')`;
-        }, 10000);
+        }, 7000);
     </script>
 </body>
 
