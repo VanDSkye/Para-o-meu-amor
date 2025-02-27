@@ -52,7 +52,7 @@
             margin: 20px auto;
             padding: 15px;
             max-width: 400px;
-            background: #ffdde1;
+            background: rgba(255, 221, 225, 0.8);
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             font-weight: bold;
@@ -76,35 +76,33 @@
         }
 
         @keyframes flutuar {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0); }
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
         }
 
         .decoracao {
             position: fixed;
-            width: 200px;
-            height: auto;
+            width: 150px;
+            height: 150px;
             z-index: 1000;
             animation: flutuar 3s infinite ease-in-out;
         }
 
         .melody {
-            bottom: 20px;
-            left: 0;
+            bottom: 30px;
+            left: 10px;
         }
 
         .kuromi {
-            bottom: 20px;
-            right: 0;
-        }
-
-        .aniversario {
-            background: rgba(255, 255, 255, 0.5);
-            padding: 15px;
-            border-radius: 10px;
-            display: inline-block;
-            margin-top: 20px;
+            bottom: 30px;
+            right: 10px;
         }
 
         @media (max-width: 768px) {
@@ -134,13 +132,13 @@
 
     <div class="message-box" id="photoMessage"></div>
 
-    <section class="aniversario">
-        <h2>Feliz Aniversário ✨</h2>
+    <section>
+        <h2>Feliz Aniversánrio ✨</h2>
         <p>Feliz aniversário, meu bem, minha flor,<br>
             Que o mundo se curve ao teu brilho, ao teu amor.<br>
             Que a vida te sorria e te dê o melhor,<br>
             Porque você é meu tudo, meu tesouro, meu amor!</p>
-
+        
         <p>Te amo mais a cada dia, mais do que posso expressar,<br>
             Você é minha vida, meu sonho, minha paz,<br>
             E ao seu lado, quero estar sempre, para o que der e vier, em qualquer lugar."</p>
@@ -149,8 +147,8 @@
     <button class="btn" onclick="showRandomLoveMessage()">Eu quero te dizer que... 💕</button>
     <div class="message-box" id="loveMessage"></div>
 
-    <img src="imagens/melody.png" class="decoracao melody" alt="My Melody fofinha">
-    <img src="imagens/kuromi.png" class="decoracao kuromi" alt="Kuromi estilosa">
+    <img src="imagens/melody.png" class="decoracao melody" alt="Lili">
+    <img src="imagens/kuromi.png" class="decoracao kuromi" alt="David">
 
     <script>
         function toggleMessage(message) {
@@ -166,7 +164,11 @@
                 "Seu abraço é meu lugar favorito no mundo, onde tudo faz sentido e a felicidade é completa. 🤗❤️",
                 "Você é o meu sonho mais bonito, aquele que eu nunca quero acordar. ✨💖",
                 "O seu sorriso tem o poder de transformar qualquer dia cinza em um dia ensolarado. ☀️😍",
-                "Cada 'eu te amo' que digo vem carregado de toda a imensidão do que sinto por você. 💞💬"
+                "Cada 'eu te amo' que digo vem carregado de toda a imensidão do que sinto por você. 💞💬",
+                "Você é meu começo, meu meio e meu infinito. Nada faz sentido sem você. 🔄❤️",
+                "Você é a poesia mais linda que a vida escreveu no meu destino. 📖❤️",
+                "Se eu pudesse, colocaria todo o meu amor em palavras, mas ele é tão grande que nem o universo conseguiria conter. 🌍💖",
+                "Eu encontrei meu lugar no mundo, e ele é ao seu lado. 😘"
             ];
 
             let loveMessageBox = document.getElementById('loveMessage');
@@ -176,7 +178,7 @@
 
         setInterval(() => {
             document.body.style.backgroundImage = `url('imagens/fundo${Math.floor(Math.random() * 4) + 1}.jpg')`;
-        }, 7000);
+        }, 10000);
     </script>
 </body>
 
