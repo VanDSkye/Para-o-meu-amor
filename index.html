@@ -13,19 +13,20 @@
             height: 100vh;
             color: #7B2CBF;
             text-align: center;
+            overflow: hidden;
         }
 
-        /* A div que vai atuar como fundo */
+        /* Div para o fundo com efeito de transição */
         .background {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('imagens/kitty.jpg') center/cover no-repeat;
-            z-index: -1; /* Coloca o fundo atrás de outros elementos */
-            opacity: 1;
-            transition: opacity 1s ease-in-out; /* Suaviza a transição de opacidade */
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            transition: background-image 1s ease-in-out;
         }
 
         header {
@@ -124,8 +125,8 @@
     </style>
 </head>
 
-<body onload="imageLoaded()">
-    <div class="background" id="background"></div> <!-- Div para fundo com transição -->
+<body>
+    <div class="background" id="background"></div> <!-- Div para o fundo com transição -->
     
     <header>Para Lili 🌸🖤</header>
     <p class="subtitle"><i>O meu lírio favorito</i></p>
@@ -184,13 +185,9 @@
         
         function trocarFundo() {
             let backgroundDiv = document.getElementById('background');
-            backgroundDiv.style.opacity = 0; /* Inicia a transição com opacidade 0 */
-            
-            setTimeout(function() {
-                backgroundDiv.style.backgroundImage = `url('${imagensDeFundo[indiceAtual]}')`;
-                indiceAtual = (indiceAtual + 1) % imagensDeFundo.length;
-                backgroundDiv.style.opacity = 1; /* Finaliza a transição com opacidade 1 */
-            }, 1000); /* Espera 1 segundo para iniciar a troca do fundo */
+            backgroundDiv.style.transition = "background-image 1s ease-in-out"; // Aplicando a transição
+            backgroundDiv.style.backgroundImage = `url('${imagensDeFundo[indiceAtual]}')`;
+            indiceAtual = (indiceAtual + 1) % imagensDeFundo.length;
         }
 
         // Troca o fundo a cada 10 segundos
