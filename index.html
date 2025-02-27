@@ -14,7 +14,6 @@
             background: #ffeef7 url('imagens/kitty.jpg') center/cover no-repeat fixed;
             color: #7B2CBF;
             text-align: center;
-            transition: background-image 1s ease-in-out;
             opacity: 0;
             transition: opacity 1s ease-in-out;
         }
@@ -119,7 +118,7 @@
     </style>
 </head>
 
-<body>
+<body onload="imageLoaded()">
     <header>Para Lili 🌸🖤</header>
     <p class="subtitle"><i>O meu lírio favorito</i></p>
 
@@ -171,7 +170,6 @@
             "imagens/fundo2.jpg",
             "imagens/fundo3.jpg",
             "imagens/fundo4.jpg"
-
         ];
         
         let indiceAtual = 0;
