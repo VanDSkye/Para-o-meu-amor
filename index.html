@@ -45,29 +45,7 @@
             cursor: pointer;
         }
 
-        .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.polaroid {
-    background: white;
-    padding: 10px;
-    border: 1px solid #ddd;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    width: 210px;
-    margin: 10px;
-}
-
-.polaroid img {
-    width: 190px;
-    height: 190px;
-    object-fit: cover;
-}
-
-.caption {
+        .caption {
     margin-top: 5px;
     font-size: 14px;
     color: #a62969;
@@ -126,27 +104,6 @@
         <img src="imagens/foto2.jpg" alt="Foto 2" onclick="toggleMessage('<i>Lilium amabile</i> é uma espécie de lírio originária da Coreia, conhecida por sua beleza delicada e sua tonalidade vibrante, geralmente em tons alaranjados ou avermelhados. Seu nome científico, <i>amabile</i>, significa \'amável\' ou \'encantador\', refletindo sua aparência cativante.<br> Assim como outros lírios, a <i>Lilium amabile</i> simboliza pureza, amor sincero e renovação. No entanto, sua cor mais intensa também pode estar associada à paixão e à energia vital. Na cultura asiática, os lírios costumam representar a nobreza de sentimentos e a superação de desafios. 💖')">
 
         <img src="imagens/foto3.jpg" alt="Foto 3" onclick="toggleMessage('Na mitologia grega, Apolo foi o primeiro a cultivar o lírio-do-vale.<br> Acredita-se que o Deus do Sol espalhou o lírio-do-vale no leito da floresta do Monte Parnaso para que suas queridas musas não machucassem os pés ao andar pelos caminhos da floresta.<br> E minha única musa é você. 💖')">
-    </section>
-
-    <div class="message-box" id="photoMessage"></div>
-
-    <section>
-        <h2>Feliz Aniversánrio ✨</h2>
-        <p>"O brilho do teu olhar ilumina meus dias, como o sol aquece a manhã fria."</p>
-
-        <section class="gallery">
-    <div class="polaroid">
-        <img src="imagens/foto1.jpg" alt="Foto 1">
-        <div class="caption">Minha Flor 💖</div>
-    </div>
-    <div class="polaroid">
-        <img src="imagens/foto2.jpg" alt="Foto 2">
-        <div class="caption">Momentos Especiais 🌸</div>
-    </div>
-    <div class="polaroid">
-        <img src="imagens/foto3.jpg" alt="Foto 3">
-        <div class="caption">Sempre Juntos ✨</div>
-    </div>
     </section>
 
     <button class="btn" onclick="showRandomLoveMessage()">Eu quero te dizer que... 💕</button>
