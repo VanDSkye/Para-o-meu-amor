@@ -129,6 +129,14 @@
             border-radius: 5px;
         }
 
+        /* Estilo para a seção de Feliz Aniversário */
+        .anniversary-text {
+            background: rgba(255, 192, 203, 0.6); /* Rosa semi-transparente */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
         @media (max-width: 1200px) {
             header {
                 font-size: 22px;
@@ -216,15 +224,17 @@
     <div class="message-box" id="photoMessage"></div>
 
     <section>
-        <h2>Feliz Aniversário ✨</h2>
-        <p>Feliz aniversário, meu bem, minha flor,<br>
-            Que o mundo se curve ao teu brilho, ao teu amor.<br>
-            Que a vida te sorria e te dê o melhor,<br>
-            Porque você é meu tudo, meu tesouro, meu amor!</p>
-        
-        <p>Te amo mais a cada dia, mais do que posso expressar,<br>
-            Você é minha vida, meu sonho, minha paz,<br>
-            E ao seu lado, quero estar sempre, para o que der e vier, em qualquer lugar."</p>
+        <div class="anniversary-text">
+            <h2>Feliz Aniversário ✨</h2>
+            <p>Feliz aniversário, meu bem, minha flor,<br>
+                Que o mundo se curve ao teu brilho, ao teu amor.<br>
+                Que a vida te sorria e te dê o melhor,<br>
+                Porque você é meu tudo, meu tesouro, meu amor!</p>
+            
+            <p>Te amo mais a cada dia, mais do que posso expressar,<br>
+                Você é minha vida, meu sonho, minha paz,<br>
+                E ao seu lado, quero estar sempre, para o que der e vier, em qualquer lugar."</p>
+        </div>
     </section>
 
     <button class="btn" onclick="showRandomLoveMessage()">Eu quero te dizer que... 💕</button>
