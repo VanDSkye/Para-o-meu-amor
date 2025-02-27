@@ -127,7 +127,7 @@
     <div class="message-box" id="photoMessage"></div>
 
     <section>
-        <h2>Feliz Aniversánrio ✨</h2>
+        <h2>Feliz Aniversário ✨</h2>
         <p>"O brilho do teu olhar ilumina meus dias, como o sol aquece a manhã fria."</p>
     </section>
 
@@ -138,51 +138,34 @@
     <img src="imagens/kuromi.png" class="decoracao kuromi" alt="Kuromi estilosa">
 
     <script>
-        function imageLoaded() {
-            document.body.classList.add('loaded');
-        }
-
         function toggleMessage(message) {
             let messageBox = document.getElementById('photoMessage');
             messageBox.innerHTML = messageBox.innerHTML === message ? '' : message;
             messageBox.style.display = messageBox.innerHTML ? 'block' : 'none';
         }
 
-        async function showRandomLoveMessage() {
-    try {
-        const url = "https://api.allorigins.win/get?url=" + encodeURIComponent('https://raw.githubusercontent.com/VanDSkye/Para-o-meu-amor/main/messages.json');
+        function showRandomLoveMessage() {
+            const mensagens = [
+                "Meu amor, você é a luz que ilumina meus dias, a razão do meu sorriso e a dona do meu coração. Te amo infinitamente! ❤️",
+                "Sempre que olho nos seus olhos, vejo o reflexo do meu mundo inteiro. Você é o meu lar. 🏡💕",
+                "Seu abraço é meu lugar favorito no mundo, onde tudo faz sentido e a felicidade é completa. 🤗❤️",
+                "Você é o meu sonho mais bonito, aquele que eu nunca quero acordar. ✨💖",
+                "O seu sorriso tem o poder de transformar qualquer dia cinza em um dia ensolarado. ☀️😍",
+                "Cada 'eu te amo' que digo vem carregado de toda a imensidão do que sinto por você. 💞💬",
+                "Você é meu começo, meu meio e meu infinito. Nada faz sentido sem você. 🔄❤️",
+                "Você é a poesia mais linda que a vida escreveu no meu destino. 📖❤️",
+                "Se eu pudesse, colocaria todo o meu amor em palavras, mas ele é tão grande que nem o universo conseguiria conter. 🌍💖",
+                "Eu encontrei meu lugar no mundo, e ele é ao seu lado. 😘"
+            ];
 
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(`Erro HTTP! Status: ${response.status}`);
+            let loveMessageBox = document.getElementById('loveMessage');
+            loveMessageBox.innerHTML = mensagens[Math.floor(Math.random() * mensagens.length)];
+            loveMessageBox.style.display = 'block';
         }
 
-        const data = await response.json();
-        const messages = JSON.parse(data.contents).messages; // Parse do JSON interno
-
-        let loveMessageBox = document.getElementById('loveMessage');
-        loveMessageBox.innerHTML = messages[Math.floor(Math.random() * messages.length)];
-        loveMessageBox.style.display = 'block';
-    } catch (error) {
-        console.error('Erro ao carregar as mensagens:', error);
-    }
-}
-
-        const imagensDeFundo = [
-            "imagens/fundo1.jpg",
-            "imagens/fundo2.jpg",
-            "imagens/fundo3.jpg",
-            "imagens/fundo4.jpg"
-        ];
-
-        let indiceAtual = 0;
-
-        function trocarFundo() {
-            document.body.style.backgroundImage = `url('${imagensDeFundo[indiceAtual]}')`;
-            indiceAtual = (indiceAtual + 1) % imagensDeFundo.length;
-        }
-
-        setInterval(trocarFundo, 10000);
+        setInterval(() => {
+            document.body.style.backgroundImage = `url('imagens/fundo${Math.floor(Math.random() * 4) + 1}.jpg')`;
+        }, 10000);
     </script>
 </body>
 
