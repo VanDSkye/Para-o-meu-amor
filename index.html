@@ -45,6 +45,35 @@
             cursor: pointer;
         }
 
+        .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.polaroid {
+    background: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 210px;
+    margin: 10px;
+}
+
+.polaroid img {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+}
+
+.caption {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #a62969;
+    font-style: italic;
+}
+
         .message-box {
             margin: 20px auto;
             padding: 15px;
@@ -104,6 +133,20 @@
     <section>
         <h2>Feliz Aniversánrio ✨</h2>
         <p>"O brilho do teu olhar ilumina meus dias, como o sol aquece a manhã fria."</p>
+
+        <section class="gallery">
+    <div class="polaroid">
+        <img src="imagens/foto1.jpg" alt="Foto 1">
+        <div class="caption">Minha Flor 💖</div>
+    </div>
+    <div class="polaroid">
+        <img src="imagens/foto2.jpg" alt="Foto 2">
+        <div class="caption">Momentos Especiais 🌸</div>
+    </div>
+    <div class="polaroid">
+        <img src="imagens/foto3.jpg" alt="Foto 3">
+        <div class="caption">Sempre Juntos ✨</div>
+    </div>
     </section>
 
     <button class="btn" onclick="showRandomLoveMessage()">Eu quero te dizer que... 💕</button>
