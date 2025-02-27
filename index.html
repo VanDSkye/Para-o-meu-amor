@@ -8,12 +8,19 @@
     <style>
         body {
             font-family: 'Times New Roman', sans-serif;
-            background: #ffeef7 center/cover no-repeat fixed;
-            color: #7B2CBF;
-            text-align: center;
             margin: 0;
             padding: 0;
+            height: 100vh;
+            background: #ffeef7 url('imagens/kitty.jpg') center/cover no-repeat fixed;
+            color: #7B2CBF;
+            text-align: center;
             transition: background-image 1s ease-in-out;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        
+        body.loaded {
+            opacity: 1;
         }
 
         header {
@@ -136,6 +143,10 @@
     <img src="imagens/kuromi.png" class="decoracao kuromi" alt="Kuromi estilosa">
 
     <script>
+        function imageLoaded() {
+            document.body.classList.add('loaded');
+        }
+        
         function toggleMessage(message) {
             let messageBox = document.getElementById('photoMessage');
             messageBox.innerHTML = messageBox.innerHTML === message ? '' : message;
