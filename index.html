@@ -36,7 +36,10 @@
             justify-content: center; /* Centraliza as imagens */
             gap: 20px; /* Espaçamento entre as imagens */
             margin-top: 20px;
-            flex-wrap: nowrap; /* Evita que as imagens quebrem para a linha seguinte */
+            flex-wrap: nowrap; /* Não permite que as imagens quebrem para a linha seguinte */
+            max-width: 100%; /* A largura máxima será 100% da tela */
+            margin-left: auto; /* Centraliza a galeria */
+            margin-right: auto; /* Centraliza a galeria */
         }
 
         .gallery img {
@@ -126,6 +129,11 @@
                 width: 120px;
                 height: 45px;
                 font-size: 14px;
+            }
+
+            .gallery img {
+                width: 190px; /* Tamanho consistente para as imagens */
+                height: 190px; /* Tamanho consistente para as imagens */
             }
         }
     </style>
