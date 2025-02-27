@@ -16,6 +16,7 @@
             text-align: center;
             opacity: 0; /* Inicialmente invisível */
             transition: opacity 2s ease-in-out; /* Suaviza a transição da opacidade */
+            transition: background-image 1s ease-in-out; /* Suaviza a transição do fundo */
         }
 
         body.loaded {
@@ -175,11 +176,15 @@
         let indiceAtual = 0;
         
         function trocarFundo() {
-            document.body.style.backgroundImage = `url('${imagensDeFundo[indiceAtual]}')`;
-            indiceAtual = (indiceAtual + 1) % imagensDeFundo.length;
+            document.body.style.opacity = 0; /* Inicia a transição com opacidade 0 */
+            setTimeout(function() {
+                document.body.style.backgroundImage = `url('${imagensDeFundo[indiceAtual]}')`;
+                indiceAtual = (indiceAtual + 1) % imagensDeFundo.length;
+                document.body.style.opacity = 1; /* Finaliza a transição com opacidade 1 */
+            }, 1000); /* Espera 1 segundo para iniciar a troca do fundo */
         }
 
-        // Troca o fundo a cada 10 segundos (ajustado para ser mais lento)
+        // Troca o fundo a cada 10 segundos
         setInterval(trocarFundo, 10000);
     </script>
 </body>
