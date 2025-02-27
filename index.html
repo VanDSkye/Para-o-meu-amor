@@ -14,12 +14,12 @@
             background: #ffeef7 url('imagens/kitty.jpg') center/cover no-repeat fixed;
             color: #7B2CBF;
             text-align: center;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
+            opacity: 0; /* Inicialmente invisível */
+            transition: opacity 2s ease-in-out; /* Suaviza a transição da opacidade */
         }
-        
+
         body.loaded {
-            opacity: 1;
+            opacity: 1; /* Visível quando carregado */
         }
 
         header {
@@ -179,8 +179,8 @@
             indiceAtual = (indiceAtual + 1) % imagensDeFundo.length;
         }
 
-        // Troca o fundo a cada 5 segundos
-        setInterval(trocarFundo, 5000);
+        // Troca o fundo a cada 10 segundos (ajustado para ser mais lento)
+        setInterval(trocarFundo, 10000);
     </script>
 </body>
 
