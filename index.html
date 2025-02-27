@@ -8,11 +8,12 @@
     <style>
         body {
             font-family: 'Times New Roman', sans-serif;
-            background: #ffeef7 url('imagens/kitty.jpg') center/cover no-repeat fixed;
+            background: #ffeef7 center/cover no-repeat fixed;
             color: #7B2CBF;
             text-align: center;
             margin: 0;
             padding: 0;
+            transition: background-image 1s ease-in-out;
         }
 
         header {
@@ -80,7 +81,7 @@
 
         .decoracao {
             position: fixed;
-            width: 150px;
+            width: 160px; 
             height: auto;
             z-index: 1000;
             animation: flutuar 3s infinite ease-in-out;
@@ -116,11 +117,9 @@
     <p class="subtitle"><i>O meu lírio favorito</i></p>
 
     <section class="gallery">
-        <img src="imagens/foto1.jpg" alt="Foto 1" onclick="toggleMessage('O lírio é a essência da delicadeza e do amor puro. <br> Ele carrega consigo a ideia de recomeço, de sentimentos que se mantêm verdadeiros apesar do tempo. Seu perfume suave sussurra promessas de sinceridade, e sua presença transmite paz, como um toque gentil no coração.<br> É uma flor que simboliza tudo o que é belo e genuíno, como um amor que não se abala, mas floresce cada vez mais forte. 💖')">
-
-        <img src="imagens/foto2.jpg" alt="Foto 2" onclick="toggleMessage('<i>Lilium amabile</i> é uma espécie de lírio originária da Coreia, conhecida por sua beleza delicada e sua tonalidade vibrante, geralmente em tons alaranjados ou avermelhados. Seu nome científico, <i>amabile</i>, significa \'amável\' ou \'encantador\', refletindo sua aparência cativante.<br> Assim como outros lírios, a <i>Lilium amabile</i> simboliza pureza, amor sincero e renovação. No entanto, sua cor mais intensa também pode estar associada à paixão e à energia vital. Na cultura asiática, os lírios costumam representar a nobreza de sentimentos e a superação de desafios. 💖')">
-
-        <img src="imagens/foto3.jpg" alt="Foto 3" onclick="toggleMessage('Na mitologia grega, Apolo foi o primeiro a cultivar o lírio-do-vale.<br> Acredita-se que o Deus do Sol espalhou o lírio-do-vale no leito da floresta do Monte Parnaso para que suas queridas musas não machucassem os pés ao andar pelos caminhos da floresta.<br> E minha única musa é você. 💖')">
+        <img src="imagens/foto1.jpg" alt="Foto 1" onclick="toggleMessage('O lírio é a essência da delicadeza e do amor puro. 💖')">
+        <img src="imagens/foto2.jpg" alt="Foto 2" onclick="toggleMessage('O Lilium amabile é um símbolo de amor sincero e renovação. 💖')">
+        <img src="imagens/foto3.jpg" alt="Foto 3" onclick="toggleMessage('Na mitologia grega, Apolo cultivou lírios para suas musas. 💖')">
     </section>
 
     <div class="message-box" id="photoMessage"></div>
@@ -155,6 +154,23 @@
             loveMessageBox.innerHTML = messages[Math.floor(Math.random() * messages.length)];
             loveMessageBox.style.display = 'block';
         }
+
+        const imagensDeFundo = [
+            "imagens/kitty.jpg",
+            "imagens/fundo1.jpg",
+            "imagens/fundo2.jpg",
+            "imagens/fundo3.jpg"
+        ];
+        
+        let indiceAtual = 0;
+        
+        function trocarFundo() {
+            document.body.style.backgroundImage = `url('${imagensDeFundo[indiceAtual]}')`;
+            indiceAtual = (indiceAtual + 1) % imagensDeFundo.length;
+        }
+
+        // Troca o fundo a cada 5 segundos
+        setInterval(trocarFundo, 5000);
     </script>
 </body>
 
