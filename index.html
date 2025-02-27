@@ -149,19 +149,19 @@
         }
 
         async function showRandomLoveMessage() {
-            try {
-                const response = await fetch('https://raw.githubusercontent.com/VanDSkye/Para-o-meu-amor/main/messages.json
-                const data = await response.json();
+    try {
+        const response = await fetch('https://raw.githubusercontent.com/VanDSkye/Para-o-meu-amor/main/messages.json');
+        const data = await response.json();
 
-                const messages = data.messages;
+        const messages = data.messages;
 
-                let loveMessageBox = document.getElementById('loveMessage');
-                loveMessageBox.innerHTML = messages[Math.floor(Math.random() * messages.length)];
-                loveMessageBox.style.display = 'block';
-            } catch (error) {
-                console.error('Erro ao carregar as mensagens:', error);
-            }
-        }
+        let loveMessageBox = document.getElementById('loveMessage');
+        loveMessageBox.innerHTML = messages[Math.floor(Math.random() * messages.length)];
+        loveMessageBox.style.display = 'block';
+    } catch (error) {
+        console.error('Erro ao carregar as mensagens:', error);
+    }
+}
 
         const imagensDeFundo = [
             "imagens/fundo1.jpg",
