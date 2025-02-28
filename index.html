@@ -12,13 +12,10 @@
             padding: 0;
             height: auto;
             background: url('imagens/fundo1.jpg') center/cover no-repeat fixed;
-            background-size: cover;
-            background-position: center;
             color: #7B2CBF;
             text-align: center;
             overflow-y: scroll;
             transition: background-image 1s ease-in-out;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
         }
 
         header {
@@ -26,14 +23,12 @@
             font-size: 24px;
             font-weight: bold;
             border-radius: 0 0 20px 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
         }
 
         .subtitle {
             font-size: 20px;
             color: #7B2CBF;
             margin-top: -20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
         }
 
         .gallery {
@@ -41,7 +36,7 @@
             justify-content: center;
             gap: 20px;
             margin-top: 20px;
-            flex-wrap: wrap;
+            flex-wrap: wrap; 
             max-width: 100%;
             margin-left: auto;
             margin-right: auto;
@@ -68,12 +63,6 @@
             border-radius: 10px;
             font-weight: bold;
             display: none;
-            opacity: 0;
-            transition: opacity 0.5s;
-        }
-
-        .message-box.show {
-            opacity: 1;
         }
 
         .btn {
@@ -86,12 +75,10 @@
             cursor: pointer;
             font-size: 16px;
             margin-top: 10px;
-            transition: background 0.3s, transform 0.2s ease-in-out;
         }
 
         .btn:hover {
             background: #5A189A;
-            transform: scale(1.1);
         }
 
         @keyframes flutuar {
@@ -135,13 +122,11 @@
         section h2 {
             padding: 10px;
             border-radius: 5px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
         }
 
         section p {
             padding: 10px;
             border-radius: 5px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
         }
 
         .anniversary-text {
@@ -282,7 +267,6 @@
 
             const loveMessageBox = document.getElementById('loveMessage');
             loveMessageBox.innerHTML = mensagens[Math.floor(Math.random() * mensagens.length)];
-            loveMessageBox.classList.add('show');
             loveMessageBox.style.display = 'block';
         }
 
